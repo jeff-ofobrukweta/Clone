@@ -1,0 +1,91 @@
+.flex-shrink-0{
+  padding-right: 16px;
+  padding-left: 16px;
+  flex-basis: 30%;
+}
+
+.flex-shrink-1{
+  padding-right: 16px;
+  padding-left: 1px;
+  flex-basis: 70%;
+}
+
+.width-full {
+  width: 100%!important;
+}
+.box-shadow-none {
+  box-shadow: none!important;
+}
+.UnderlineNav {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  justify-content: space-between;
+}
+
+.UnderlineNav-body {
+  display: flex;
+}
+
+.UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current=false]), .UnderlineNav-item[role=tab][aria-selected=true] {
+  font-weight: 600;
+  color: #24292e;
+  border-bottom-color: #f9826c;
+  outline: 1px dotted transparent;
+  outline-offset: -1px;
+}
+
+.UnderlineNav .Counter {
+  margin-left: 4px;
+  color: #24292e;
+}
+
+.UnderlineNav-octicon {
+  margin-right: 4px;
+  color: #959da5 !important;
+}
+
+.Counter {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  background-color: #d1d5da80;
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.UnderlineNav-item {
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #959da5;
+  text-align: center;
+  white-space: nowrap;
+  background-color: initial;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color .36s ease-in;
+}
+
+.px-lg-5 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-ioc {
+  width: 100%;
+  display: flex;
+  margin-top: 24px;
+  border-bottom: 1px solid #e6e6e6;
+}

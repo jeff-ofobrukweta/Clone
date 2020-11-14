@@ -1,0 +1,22 @@
+@import "./layout/layout.scss";
+// @import "../../_variables";
+
+// @import "../_mixins";
+
+@import "./components/card.scss";
+@import "./components/header.scss";
+@import "./components/mainheader.scss";
+
+$body-color: slateblue;
+
+body {
+  color: $body-color;
+  font-family: sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  background-color: initial;
+}
+
