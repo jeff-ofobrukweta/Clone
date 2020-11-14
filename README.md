@@ -1,4 +1,4 @@
-# Webpack Frontend Starterkit
+# Github Clone
 
 
 A lightweight foundation for your next webpack based frontend project.
