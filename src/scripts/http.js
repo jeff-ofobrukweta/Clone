@@ -2,7 +2,7 @@ const baseUrl = "https://api.github.com/graphql";
 
 const fetch = require("node-fetch");
 const openSource = {
-  githubConvertedToken : "bebc0c2116b496d798397d8a2f710a86c8b5694b",
+  githubConvertedToken : "fa8cbaee793b90d92e279efd59898f824ad5de15",
   githubUserName: "jeff-ofobrukweta"
 };
 const headers = {
@@ -22,6 +22,12 @@ const query_issue = {
       avatarUrl
       email
       bio
+      starredRepositories{
+        totalCount
+      }
+      pullRequests{
+        totalCount
+      }
       repositories(first: 100, affiliations: [OWNER, COLLABORATOR], ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) {
         totalCount
         pageInfo {
@@ -78,5 +84,16 @@ fetch(baseUrl, {
   body: JSON.stringify(query_issue),
 })
   .then(res => res.json())
-  .then((res) => console.log(">>>>>>>>>>",res))
+  .then((res) => {
+    console.log(res.data.viewer.repositories.nodes);
+
+    document.getElementById("card-info").innerHTML = res.data.viewer.bio;
+    document.getElementById("additionalName").innerHTML = res.data.viewer.login;
+    document.getElementById("avatar-container-sm").src = res.data.viewer.avatarUrl;
+    document.getElementById("avatar-container").src = res.data.viewer.avatarUrl;
+    document.getElementById("name-profile").innerHTML = res.data.viewer.login;
+    // name-profile
+    
+
+  })
   .catch((error) => console.log(JSON.stringify(error)));

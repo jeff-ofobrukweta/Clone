@@ -80,7 +80,7 @@
                   data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MjUyOTQ3NzIiLCJ0IjoxNjA1MjcyMDcyfQ==--d338d4540486ba2d91c199ebd91c89783e721d5dc0b7b8b3a8d12d3db2348600"
                   data-catalyst="">
                   <a href="/notifications"
-                    class="Header-link notification-indicator position-relative tooltipped tooltipped-sw"
+                    class="Header-link notification-indicator position-relative tooltipped  tooltipped-sw"
                     aria-label="You have unread notifications" data-hotkey="g n"
                     data-ga-click="Header, go to notifications, icon:unread" data-target="notification-indicator.link">
                     <span class="mail-status unread " data-target="notification-indicator.modifier"></span>
@@ -122,7 +122,7 @@
                   <summary class="Header-link" aria-label="View profile and more"
                     data-ga-click="Header, show menu, icon:avatar" aria-haspopup="menu" role="button">
                     <img alt="@jeff-ofobrukweta" width="20" height="20"
-                      src="https://avatars1.githubusercontent.com/u/25294772?s=60&amp;v=4" class="avatar avatar-user ">
+                      src="https://" class="avatar avatar-user " id="avatar-container-sm">
 
                     <span class="feature-preview-indicator js-feature-preview-indicator" style="top: 1px;"
                       hidden=""></span>
@@ -139,7 +139,42 @@
       </div>
     </nav>
   </header>
+
   <!-- end main header -->
+
+  <!-- main header mobile start -->
+  <div class="nav mobile-nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <a class="Header-link " href="https://github.com/" data-hotkey="g d" aria-label="Homepage "
+          data-ga-click="Header, go to dashboard, icon:logo">
+          <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+            width="32" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <a href="//github.io/jo_geek" target="_blank">Github</a>
+      <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
+      <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+      <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
+      <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+    </div>
+  </div>
+  <!-- main header mobile stop -->
 
 
   <div class="flex-body-main-container">
@@ -211,13 +246,82 @@
 
 
     <div class="container-xl inner-container-main px-3 px-md-4 px-lg-5">
-      <div class="left-body">
-        <div class="container-xl px-3 px-md-4 px-lg-5">
-          hello world
+      <div class="left-body col-12 col-md-3 mb-4 mb-md-0">
+
+        <div class="clearfix d-flex d-md-block flex-items-center mb-4 mb-md-0">
+          <div class="container-xl position-relative d-inline-block col-2 col-md-12 mr-3 mr-md-0 flex-shrink-0 "
+            style="z-index:4;">
+            <a class="tooltipped move tooltipped-s d-block" aria-label="Change your avatar"
+              data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25294772,&quot;target&quot;:&quot;EDIT_AVATAR&quot;,&quot;user_id&quot;:25294772,&quot;originating_url&quot;:&quot;https://github.com/jeff-ofobrukweta&quot;}}"
+              data-hydro-click-hmac="a3fec38b789ff887f407f6de7407b3d7deff0df11b0508183a679a993900e0e1"
+              href="https://github.com/account">
+              <img style="height:auto;" alt="" width="260" height="260" id="avatar-container"
+                class="avatar avatar-main avatar-user width-full border bg-white"
+                src="https://">
+            </a>
+
+
+
+            <!-- here is a test  -->
+
+            <div class="user-status-container position-relative hide-sm hide-md">
+              <div class="f5 js-user-status-context user-status-circle-badge-container"
+                data-url="/users/status?compact=0&amp;link_mentions=1&amp;truncate=0">
+
+                <div class="js-user-status-container user-status-circle-badge d-inline-block lh-condensed-ultra p-2"
+                  style="width: 20px; height: 20px;" data-team-hovercards-enabled="">
+                  <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
+                    <summary
+                      class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
+                      data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25294772,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:25294772,&quot;originating_url&quot;:&quot;https://github.com/jeff-ofobrukweta&quot;}}"
+                      data-hydro-click-hmac="f1708fedd0193ab9f3b11a7d0ae876b359f05de436a4fd22322a46688069f11f"
+                      role="button">
+                      <div class="d-flex flex-items-center flex-items-stretch">
+                        <div
+                          class="f6 lh-condensed user-status-header d-inline-flex user-status-emoji-only-header circle">
+                          <div
+                            class="user-status-emoji-container flex-shrink-0 mr-2 d-flex flex-items-center flex-justify-center ">
+                            <div>
+                              <g-emoji class="g-emoji" alias="house"
+                                fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">🏠
+                              </g-emoji>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="
+                   ws-normal
+                   user-status-message-wrapper f6 min-width-0">
+                          <div class="css-truncate css-truncate-target width-fit text-gray-dark">
+                            <span>
+                              <div>Working from home</div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </summary>
+                  </details>
+                </div>
+
+              </div>
+            </div>
+
+            <div
+              class="vcard-names-container float-left col-10 col-md-12 pt-1 pt-md-3 pb-1 pb-md-3 js-sticky js-user-profile-sticky-fields"
+              data-original-top="0px" style="position: static;">
+              <h1 class="vcard-names pl-2 pl-md-0">
+                <span class="p-name vcard-fullname d-block overflow-hidden" id="name-profile" itemprop="name">loading</span>
+                <span class="p-nickname vcard-username d-block" id="additionalName" itemprop="additionalName">loading</span>
+              </h1>
+            </div>
+            <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4">
+              <div id="card-info">loading</div>
+            </div>
+
+          </div>
         </div>
       </div>
 
-      <div class="right-body">
+      <div class="right-body flex-shrink-right-0 col-12 col-md-9 mb-4 mb-md-0">
         <!-- card loading -->
         <ul style="padding: 0px;">
           <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
