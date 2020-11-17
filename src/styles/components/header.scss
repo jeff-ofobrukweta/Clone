@@ -81,11 +81,38 @@
 .px-lg-5 {
   display: flex;
   justify-content: space-between;
+  background: #fff;
+  z-index: 0;
 }
 
 .header-ioc {
+  position: sticky;
+  top: 0px;
   width: 100%;
   display: flex;
   margin-top: 24px;
   border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+// mobile view
+@media (max-width:860px) {
+  .mobile-nav-subheader{
+    display: none;
+  }
+
+
+  .flex-shrink-1 {
+    padding-right: 16px;
+    padding-left: 16px;
+    flex-basis: 100%;
+}
+
+.px-lg-5 {
+  display: flex;
+  -webkit-box-pack: justify;
+  flex-direction: column;
+  justify-content: space-between;
+}
 }

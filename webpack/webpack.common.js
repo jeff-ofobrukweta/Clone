@@ -1,4 +1,9 @@
 const Path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config({
+  path: Path.join(__dirname, '.env'
+  )
+});
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -19,6 +24,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": dotenv.parsed
+    }),
     new CopyWebpackPlugin({ patterns: [{ from: Path.resolve(__dirname, '../public'), to: 'public' }] }),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html'),

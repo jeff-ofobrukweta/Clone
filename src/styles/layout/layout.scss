@@ -26,9 +26,6 @@ ul{
 
 
 // side-bar left region
-.d-inline-block {
-  display: inline-block!important;
-}
 
 .vcard-names {
   line-height: 1;
@@ -60,21 +57,6 @@ ul{
   overflow: hidden!important;
 }
 
-@media (min-width: 768px){
-  .mr-md-0 {
-    margin-right: 0!important;
-  }
-  .pl-md-0, .px-md-0 {
-    padding-left: 0!important;
-}
-.f4 {
-  font-size: 16px!important;
-}
-
-  .pb-md-3 {
-    padding-bottom: 16px!important;
-}
-}
 
 .d-block {
   display: block!important;
@@ -117,6 +99,7 @@ a {
 .user-status-circle-badge-container {
    position: absolute;
     bottom: 0;
+    transition: width 2s;
     left: 100%;
     z-index: 2;
     width: 38px;
@@ -124,6 +107,7 @@ a {
     margin-bottom: 73px;
     margin-left: -40px;
 }
+
 .user-status-circle-badge {
   background-color: #fff;
   border: 1px solid #e1e4e8;
@@ -132,11 +116,11 @@ a {
 }
 
 .d-inline-block {
-  display: inline-block!important;
+  display: inline-block;
 }
 
 .lh-condensed-ultra {
-line-height: 1!important;
+line-height: 1 !important;
 }
 .p-2 {
 padding: 8px!important;
@@ -187,9 +171,7 @@ padding: 8px!important;
 .circle {
   border-radius: 50%!important;
 }
-.css-truncate{
-  display: none;
-}
+
 .user-status-circle-badge-container .user-status-emoji-container {
   width: 20px;
   height: 20px;
@@ -201,7 +183,7 @@ padding: 8px!important;
 }
 
 .flex-shrink-0 {
-  flex-shrink: 0!important;
+  flex-shrink: 0 !important;
 }
 .flex-items-center {
   align-items: center!important;
@@ -214,11 +196,32 @@ padding: 8px!important;
   display: table;
   content: "";
 }
+.user-status-circle-badge{
+  width: 20px;
+  height: 20px;
+  transition: width 1.5s;
+}
+
+.user-status-circle-badge:hover{
+  width: 124px;
+  height: 20px;
+  opacity: 1;
+  
+}
+
+.css-truncate {
+  display: none;
+}
 
 @media (min-width: 768px){
   .col-md-3 {
-    width: 25%;
+    width: 100%;
 }
+
+.d-inline-block {
+  display: flex;
+}
+
 
 .d-md-block {
   display: block !important;
@@ -226,6 +229,20 @@ padding: 8px!important;
 
 .mb-md-0 {
   margin-bottom: 0 !important;
+}
+
+.mr-md-0 {
+  margin-right: 0 !important;
+}
+.pl-md-0, .px-md-0 {
+  padding-left: 0 !important;
+}
+.f4 {
+font-size: 16px !important;
+}
+
+.pb-md-3 {
+  padding-bottom: 16px !important;
 }
 
 }

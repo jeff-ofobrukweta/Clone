@@ -11,6 +11,10 @@ module.exports = merge(common, {
   output: {
     chunkFilename: 'js/[name].chunk.js'
   },
+  node: {
+    fs: 'empty'
+  },
+  target: "web",
   devServer: {
     inline: true,
     hot: true

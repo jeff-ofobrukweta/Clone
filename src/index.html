@@ -116,17 +116,17 @@
 
               <!-- profile here -->
               <div class="Header-item position-relative mr-0 d-none d-md-flex">
-
                 <details class="details-overlay details-reset js-feature-preview-indicator-container"
                   data-feature-preview-indicator-src="/users/jeff-ofobrukweta/feature_preview/indicator_check">
                   <summary class="Header-link" aria-label="View profile and more"
                     data-ga-click="Header, show menu, icon:avatar" aria-haspopup="menu" role="button">
-                    <img alt="@jeff-ofobrukweta" width="20" height="20"
-                      src="https://" class="avatar avatar-user " id="avatar-container-sm">
+                    <img alt="@jeff-ofobrukweta" width="20" height="20" src="https://" class="avatar avatar-user "
+                      id="avatar-container-sm">
 
                     <span class="feature-preview-indicator js-feature-preview-indicator" style="top: 1px;"
                       hidden=""></span>
-                    <span class="dropdown-caret"></span>
+                    <span class="dropdown-caret">
+                    </span>
                   </summary>
                 </details>
               </div>
@@ -145,33 +145,89 @@
   <!-- main header mobile start -->
   <div class="nav mobile-nav">
     <input type="checkbox" id="nav-check">
-    <div class="nav-header">
-      <div class="nav-title">
-        <a class="Header-link " href="https://github.com/" data-hotkey="g d" aria-label="Homepage "
-          data-ga-click="Header, go to dashboard, icon:logo">
-          <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
-            width="32" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-            </path>
-          </svg>
-        </a>
+    <div class="container-tame">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a class="Header-link " href="https://github.com/" data-hotkey="g d" aria-label="Homepage "
+            data-ga-click="Header, go to dashboard, icon:logo">
+            <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+              width="32" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="Header-item mr-0 mr-md-3 flex-order-1 flex-md-order-none">
+        <notification-indicator class="js-socket-channel"
+          data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MjUyOTQ3NzIiLCJ0IjoxNjA1NTY3MzU5fQ==--f38ee6622adc8cdd6f5a67fdf9f57db37418aa69544ba8a29bb89e6929e739cc"
+          data-catalyst="">
+          <a href="/notifications" class="Header-link notification-indicator position-relative tooltipped tooltipped-sw"
+            aria-label="You have unread notifications" data-hotkey="g n"
+            data-ga-click="Header, go to notifications, icon:unread" data-target="notification-indicator.link">
+            <span class="mail-status unread " data-target="notification-indicator.modifier"></span>
+            <svg class="octicon octicon-bell" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+              aria-hidden="true">
+              <path
+                d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z">
+              </path>
+              <path fill-rule="evenodd"
+                d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z">
+              </path>
+            </svg>
+          </a>
+        </notification-indicator>
       </div>
     </div>
     <div class="nav-btn">
-      <label for="nav-check">
+      <label for="nav-check" style="cursor: pointer;">
         <span></span>
         <span></span>
         <span></span>
       </label>
     </div>
 
+
     <div class="nav-links">
-      <a href="//github.io/jo_geek" target="_blank">Github</a>
-      <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
-      <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
-      <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
-      <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+      <a href="#" style="border: 0px;">
+        <form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="User"
+          data-scope-id="25294772" data-scoped-search-url="/users/jeff-ofobrukweta/search"
+          data-unscoped-search-url="/search" action="/users/jeff-ofobrukweta/search" accept-charset="UTF-8"
+          method="get">
+          <label class="form-control input-sm header-search-wrapper p-0 js-chromeless-input-container">
+            <input type="text"
+              class="form-control input-sm header-search-input  js-site-search-focus js-site-search-field is-clearable"
+              data-hotkey="s,/" name="q" value="" placeholder="Search" data-unscoped-placeholder="Search GitHub"
+              data-scoped-placeholder="Search" autocapitalize="off" aria-label="Search this user">
+          </label>
+        </form>
+      </a>
+      <a href="#">Stackoverflow</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Codepen</a>
+      <a class="Header-link d-block d-md-none mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15"
+        href="/jeff-ofobrukweta">
+        <img class="avatar avatar-user" src="https://avatars2.githubusercontent.com/u/25294772?s=40&amp;v=4" width="20"
+          height="20" alt="@jeff-ofobrukweta">
+        jeff-ofobrukweta
+      </a>
+      <a>
+        <form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token"
+            value="hxRj0vNqpgrpfwDDMP3fvZPiyXAg6LUXy2PgmAuH/+Y9L52btJG56xAP/xrOq3Fy+q1YmJGF/QB/OmdxqiPfhQ==">
+          <button type="submit"
+            class="Header-link mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15 d-md-none btn-link d-block width-full text-left"
+            data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
+            <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16"
+              height="16" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z">
+              </path>
+            </svg>
+            Sign out
+          </button>
+        </form>
+      </a>
     </div>
   </div>
   <!-- main header mobile stop -->
@@ -180,7 +236,7 @@
   <div class="flex-body-main-container">
     <!-- header start here -->
     <div class="container-xl px-3 px-md-4 px-lg-5 header-ioc">
-      <div class="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0"></div>
+      <div class="flex-shrink-0 mobile-nav-subheader col-12 col-md-9 mb-4 mb-md-0"></div>
       <div class="flex-shrink-1 col-12 col-md-9 mb-4 mb-md-0">
         <div class="UnderlineNav width-full box-shadow-none">
           <nav class="UnderlineNav-body" data-pjax="" aria-label="User profile">
@@ -256,8 +312,7 @@
               data-hydro-click-hmac="a3fec38b789ff887f407f6de7407b3d7deff0df11b0508183a679a993900e0e1"
               href="https://github.com/account">
               <img style="height:auto;" alt="" width="260" height="260" id="avatar-container"
-                class="avatar avatar-main avatar-user width-full border bg-white"
-                src="https://">
+                class="avatar avatar-main avatar-user width-full border bg-white" src="https://">
             </a>
 
 
@@ -269,7 +324,7 @@
                 data-url="/users/status?compact=0&amp;link_mentions=1&amp;truncate=0">
 
                 <div class="js-user-status-container user-status-circle-badge d-inline-block lh-condensed-ultra p-2"
-                  style="width: 20px; height: 20px;" data-team-hovercards-enabled="">
+                  data-team-hovercards-enabled="">
                   <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
                     <summary
                       class="btn-link btn-block link-gray no-underline js-toggle-user-status-edit toggle-user-status-edit "
@@ -280,12 +335,13 @@
                         <div
                           class="f6 lh-condensed user-status-header d-inline-flex user-status-emoji-only-header circle">
                           <div
+                          id="user-status-emoji-container"
                             class="user-status-emoji-container flex-shrink-0 mr-2 d-flex flex-items-center flex-justify-center ">
-                            <div>
+                            <!-- <div>
                               <g-emoji class="g-emoji" alias="house"
                                 fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">🏠
                               </g-emoji>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                         <div class="
@@ -309,8 +365,10 @@
               class="vcard-names-container float-left col-10 col-md-12 pt-1 pt-md-3 pb-1 pb-md-3 js-sticky js-user-profile-sticky-fields"
               data-original-top="0px" style="position: static;">
               <h1 class="vcard-names pl-2 pl-md-0">
-                <span class="p-name vcard-fullname d-block overflow-hidden" id="name-profile" itemprop="name">loading</span>
-                <span class="p-nickname vcard-username d-block" id="additionalName" itemprop="additionalName">loading</span>
+                <span class="p-name vcard-fullname d-block overflow-hidden" id="name-profile"
+                  itemprop="name">loading</span>
+                <span class="p-nickname vcard-username d-block" id="additionalName"
+                  itemprop="additionalName">loading</span>
               </h1>
             </div>
             <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4">
@@ -321,54 +379,10 @@
         </div>
       </div>
 
-      <div class="right-body flex-shrink-right-0 col-12 col-md-9 mb-4 mb-md-0">
+      <div class="right-body flex-shrink-right-0 col-12 col-md-9 mb-4 mb-md-0" id="boom">
         <!-- card loading -->
-        <ul style="padding: 0px;">
-          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-            <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
-              <div class="pinned-item-list-item-content">
-                <div class="d-flex width-full flex-items-center position-relative">
-                  <a href="/jeff-ofobrukweta/uba-reward" class="text-bold flex-auto min-width-0">
-                    <span class="repo" title="uba-reward">uba-reward</span>
-                  </a>
+        <!-- card here after bundle -->
 
-                </div>
-
-
-                <p class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
-                  interswitch parole
-                </p>
-
-                <p class="mb-0 f6 text-gray">
-                  <span class="d-inline-block mr-3">
-                    <span class="repo-language-color" style="background-color: #f1e05a"></span>
-                    <span itemprop="programmingLanguage">JavaScript</span>
-                  </span>
-
-                  <a href="/jeff-ofobrukweta/uba-reward/stargazers" class="pinned-item-meta muted-link ">
-                    <svg aria-label="star" class="octicon octicon-star" viewBox="0 0 16 16" version="1.1" width="16"
-                      height="16" role="img">
-                      <path fill-rule="evenodd"
-                        d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
-                      </path>
-                    </svg>
-                    1
-                  </a>
-                  <a href="/jeff-ofobrukweta/uba-reward/network/members" class="pinned-item-meta muted-link ">
-                    <svg aria-label="fork" class="octicon octicon-repo-forked" viewBox="0 0 16 16" version="1.1"
-                      width="16" height="16" role="img">
-                      <path fill-rule="evenodd"
-                        d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z">
-                      </path>
-                    </svg>
-                    1
-                  </a>
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <!-- card end -->
       </div>
     </div>
   </div>

@@ -5,12 +5,16 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'production',
+  target: "web",
   devtool: 'source-map',
   stats: 'errors-only',
   bail: true,
   output: {
     filename: 'js/[name].[chunkhash:8].js',
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+  },
+  node: {
+    fs: 'empty'
   },
   plugins: [
     new Webpack.DefinePlugin({
