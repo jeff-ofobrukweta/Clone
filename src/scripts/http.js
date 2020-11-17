@@ -1,15 +1,13 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log(">>>here>>>>>>>", process.env);
-
 const baseUrl = "https://api.github.com/graphql";
 
 const fetch = require("node-fetch");
 
 
 const openSource = {
-  githubConvertedToken: "b95ff3fb9b216e6b0ffc70762ac6adb733024479",
+  githubConvertedToken: "64376b837381c25dca8dbdf073abbbd3f29196ca",
   githubUserName: "jeff-ofobrukweta"
 };
 const headers = {

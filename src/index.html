@@ -37,14 +37,14 @@
 
           <div class="sub-main-nav-list">
             <div class="main-item-list flex-shrink-1 col-12 col-md-9 mb-4 mb-md-0">
-              <ul class="list-main-container">
+              <ul class="list-main-container" id="list-main-container">
                 <li
                   class="js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15">
                   <a class="Header-link py-md-3 d-block d-md-none py-2 border-top border-md-top-0 border-white-fade-15">
                     Pull<span class="d-inline d-md-none d-lg-inline"> request</span></li>
                 </a>
                 <li
-                  class="js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15">
+                  class=" js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15">
                   <a class="js-selected-navigation-item Header-link mt-md-n3 mb-md-n3 py-2 py-md-3 mr-0 mr-md-3 border-top border-md-top-0 border-white-fade-15"
                     data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user"
                     aria-label="Issues you created"
@@ -239,11 +239,9 @@
       <div class="flex-shrink-0 mobile-nav-subheader col-12 col-md-9 mb-4 mb-md-0"></div>
       <div class="flex-shrink-1 col-12 col-md-9 mb-4 mb-md-0">
         <div class="UnderlineNav width-full box-shadow-none">
-          <nav class="UnderlineNav-body" data-pjax="" aria-label="User profile">
-            <a aria-current="page" class="UnderlineNav-item selected "
-              data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25294772,&quot;target&quot;:&quot;TAB_OVERVIEW&quot;,&quot;user_id&quot;:25294772,&quot;originating_url&quot;:&quot;https://github.com/jeff-ofobrukweta&quot;}}"
-              data-hydro-click-hmac="3427c23a964f8e40416a881ab51260b0388d1fd06ec49773e8f819161e687a2f"
-              href="/jeff-ofobrukweta">
+          <nav class="UnderlineNav-body" id="UnderlineNav-body" data-pjax="" aria-label="User profile">
+            <a aria-current="page" id="UnderlineNav-item active" class="UnderlineNav-item active"
+              href="#">
               <svg class="octicon octicon-book UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                 version="1.1" width="16" aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -252,10 +250,8 @@
               </svg>
               Overview
             </a>
-            <a class="UnderlineNav-item "
-              data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25294772,&quot;target&quot;:&quot;TAB_REPOSITORIES&quot;,&quot;user_id&quot;:25294772,&quot;originating_url&quot;:&quot;https://github.com/jeff-ofobrukweta&quot;}}"
-              data-hydro-click-hmac="6de2d99b62146900aa90d5b32c33c14c11caa2b726cd25b2db4fd1981726ef6f"
-              href="/jeff-ofobrukweta?tab=repositories">
+            <a class="UnderlineNav-item " id="UnderlineNav-item"
+              href="#">
               <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                 version="1.1" width="16" aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -265,10 +261,8 @@
               Repositories
               <span title="38" class="Counter ">38</span>
             </a>
-            <a class="UnderlineNav-item "
-              data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25294772,&quot;target&quot;:&quot;TAB_PROJECTS&quot;,&quot;user_id&quot;:25294772,&quot;originating_url&quot;:&quot;https://github.com/jeff-ofobrukweta&quot;}}"
-              data-hydro-click-hmac="9fbb2b5d8a222e911f51e523e7d80faad0a3e5aefd8c554d6e582d8831607db7"
-              href="/jeff-ofobrukweta?tab=projects">
+            <a class="UnderlineNav-item " id="UnderlineNav-item"
+              href="#">
               <svg class="octicon octicon-project UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                 version="1.1" width="16" aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -278,10 +272,8 @@
               Projects
               <span title="0" hidden="hidden" class="Counter ">0</span>
             </a>
-            <a class="UnderlineNav-item "
-              data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:25294772,&quot;target&quot;:&quot;TAB_PACKAGES&quot;,&quot;user_id&quot;:25294772,&quot;originating_url&quot;:&quot;https://github.com/jeff-ofobrukweta&quot;}}"
-              data-hydro-click-hmac="885c08b34fbf0efe20e7b0ccda85f9e66ed48c8640e5a678b5b9ef2506909c6f"
-              href="/jeff-ofobrukweta?tab=packages">
+            <a class="UnderlineNav-item " id="UnderlineNav-item"
+              href="#">
               <svg class="octicon octicon-package UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
                 version="1.1" width="16" aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -334,8 +326,7 @@
                       <div class="d-flex flex-items-center flex-items-stretch">
                         <div
                           class="f6 lh-condensed user-status-header d-inline-flex user-status-emoji-only-header circle">
-                          <div
-                          id="user-status-emoji-container"
+                          <div id="user-status-emoji-container"
                             class="user-status-emoji-container flex-shrink-0 mr-2 d-flex flex-items-center flex-justify-center ">
                             <!-- <div>
                               <g-emoji class="g-emoji" alias="house"
