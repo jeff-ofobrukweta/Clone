@@ -6,8 +6,8 @@ let fetch = require("node-fetch");
 
 
 let openSource = {
-  githubConvertedToken: "521d9cd66bc78eec316cadf4bb3f2f0d399647b2",
-  githubUserName: "jeff-ofobrukweta"
+  githubConvertedToken: process.env.API_KEY_GITHUB,
+  githubUserName: process.env.USER_NAME
 };
 let headers = {
   "Content-Type": "application/json",

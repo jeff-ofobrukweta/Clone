@@ -3,6 +3,7 @@ const header = window.document.getElementById("UnderlineNav-body");
 
 const btns = header.getElementsByClassName("UnderlineNav-item");
 
+
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     let current = window.document.getElementsByClassName("active");
@@ -11,5 +12,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-
-
+window.onload =()=>{ 
+  window.document.getElementById("main-loader").style.display = "none";
+};
