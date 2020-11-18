@@ -1,6 +1,8 @@
 let dotenv = require('dotenv');
 dotenv.config();
-let baseUrl = "https://api.github.com/graphql";
+
+
+let baseUrl = process.env.BASE;
 
 let fetch = require("node-fetch");
 
