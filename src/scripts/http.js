@@ -4,7 +4,6 @@ let baseUrl = "https://api.github.com/graphql";
 
 let fetch = require("node-fetch");
 
-console.log(">>>>>here>>>",process.env.API_KEY_GITHUB,process.env.USER_NAME);
 let openSource = {
   githubConvertedToken: process.env.API_KEY_GITHUB,
   githubUserName: process.env.USER_NAME
