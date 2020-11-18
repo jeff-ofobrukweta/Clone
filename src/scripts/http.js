@@ -106,7 +106,6 @@ fetch(baseUrl, {
 })
   .then(res => res.json())
   .then((res) => {
-    console.log(res.data.viewer.repositories.nodes);
     document.getElementById("boom").innerHTML = listRepository(res.data.viewer.repositories.nodes);
     document.getElementById("user-status-emoji-container").innerHTML = res.data.user.status.emojiHTML;
 
