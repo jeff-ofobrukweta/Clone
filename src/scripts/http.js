@@ -1,15 +1,15 @@
-const dotenv = require('dotenv');
+let dotenv = require('dotenv');
 dotenv.config();
-const baseUrl = "https://api.github.com/graphql";
+let baseUrl = "https://api.github.com/graphql";
 
-const fetch = require("node-fetch");
+let fetch = require("node-fetch");
 
 
-const openSource = {
-  githubConvertedToken: "eb9fee6443d025b874a4473b4f01502f54699674",
+let openSource = {
+  githubConvertedToken: "521d9cd66bc78eec316cadf4bb3f2f0d399647b2",
   githubUserName: "jeff-ofobrukweta"
 };
-const headers = {
+let headers = {
   "Content-Type": "application/json",
   Authorization: "bearer " + openSource.githubConvertedToken,
 };
@@ -17,7 +17,7 @@ const headers = {
 
 
 
-const query_issue = {
+let query_issue = {
   query: `query{
     viewer {
       login
@@ -32,7 +32,7 @@ const query_issue = {
       pullRequests{
         totalCount
       }
-      repositories(first: 20, affiliations: [OWNER, COLLABORATOR], ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) {
+      repositories( first: 20,orderBy: {field: CREATED_AT, direction: DESC} affiliations: [OWNER, COLLABORATOR], ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]) {
         totalCount
         pageInfo {
           endCursor
@@ -52,6 +52,7 @@ const query_issue = {
           forks {
             totalCount
           }
+          updatedAt
           owner {
             login
           }
@@ -118,6 +119,9 @@ fetch(baseUrl, {
     document.getElementById("mobile-avatar-user-sm").src = res.data.viewer.avatarUrl;
     document.getElementById("mobile-header-avatar-container-sm").innerHTML = res.data.viewer.login;
 
+    // pg-number
+    document.getElementById("pg-number").innerHTML = res.data.viewer.repositories.totalCount;
+    document.getElementById("Counter-pg-number").innerHTML = res.data.viewer.repositories.totalCount;
 
 
 
@@ -127,7 +131,48 @@ fetch(baseUrl, {
   })
   .catch((error) => console.log(JSON.stringify(error)));
 
-
+  let alphabeticFormat = (date) => {
+    if (!date) return;
+    let zeroTime = false;
+    try {
+      let split = date.split("T");
+      if (split[1] === "00:00:00") zeroTime = true;
+    } catch (error) {}
+  
+    date = new Date(date);
+    let monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "June",
+      "July",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    let day = date.getDate();
+    let monthIndex = date.getMonth();
+    let year = date.getFullYear();
+    let hours = date.getHours();
+    let mins = date.getMinutes();
+    let secs = date.getSeconds();
+  
+    if (day < 10) day = `0${day}`;
+    if (hours < 10) hours = `0${hours}`;
+    if (mins < 10) mins = `0${mins}`;
+    if (secs < 10) secs = `0${secs}`;
+  
+    //CHECK IF DATE HAS TIME
+    if (zeroTime)
+      return `${day} ${monthNames[monthIndex]}. ${year} ${hours}:${mins}:${secs}`;
+    if (hours === "00" && mins === "00" && secs === "00")
+      return `${day} ${monthNames[monthIndex]}. ${year}`;
+    return `${day} ${monthNames[monthIndex]}`;
+  };
 
 const listRepository = (list = []) =>
   '<ul style="padding: 0px;">' 
@@ -165,14 +210,20 @@ const listRepository = (list = []) =>
                 </svg>
                 ${item.stargazers ? item.stargazers.totalCount : "-"}
               </a>
-              <a href="/jeff-ofobrukweta/uba-reward/network/members" class="pinned-item-meta muted-link ">
-                <svg aria-label="fork" class="octicon octicon-repo-forked" viewBox="0 0 16 16" version="1.1"
+              <a href="/" class="pinned-item-meta muted-link ">
+                <svg aria-label="fork" style="margin-right: 10px;" class="octicon octicon-repo-forked" viewBox="0 0 16 16" version="1.1"
                   width="16" height="16" role="img">
                   <path fill-rule="evenodd"
                     d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z">
                   </path>
                 </svg>
                 ${item.forks ? item.forks.totalCount : "-"}
+              </a>
+              <a href="/" class="pinned-item-meta muted-link ">
+                Updated
+                <relative-time datetime="2020-11-17T15:20:34Z" class="no-wrap" title=${item.updatedAt ? alphabeticFormat(item.updatedAt) : "-"}>
+                  ${item.updatedAt ? alphabeticFormat(item.updatedAt) : "-"}
+                </relative-time>
               </a>
             </p>
           </div>
