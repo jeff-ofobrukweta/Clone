@@ -16,4 +16,4 @@
   force = false
 
   [build]
-  publish = "dist"
+  publish = "build"
