@@ -23,7 +23,12 @@ module.exports = {
     },
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      dry: true,
+      verbose: true,
+      cleanStaleWebpackAssets: false,
+      protectWebpackAssets: false
+    }),
     new webpack.DefinePlugin({
       "process.env": dotenv.parsed
     }),
