@@ -19,6 +19,7 @@ ul{
 }
 
 .right-body {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,6 +235,9 @@ padding: 8px!important;
 // loader
 #octo{
   width: 38px;
+  position: absolute;
+  top: 1rem;
+  left: 40%
 }
 
 .css-truncate {

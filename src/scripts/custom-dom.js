@@ -11,7 +11,3 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-window.onload =()=>{ 
-  window.document.getElementById("main-loader").style.display = "none";
-};
