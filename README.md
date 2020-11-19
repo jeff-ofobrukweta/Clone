@@ -34,9 +34,6 @@ API_KEY_GITHUB = ****github public access key"
 USER_NAME = "github username", 
 BASE = https://api.github.com/graphql
 ```
-
-```
-```
 ### Start Dev Server
 
 ```
