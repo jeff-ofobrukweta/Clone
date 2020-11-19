@@ -124,7 +124,7 @@ fetch(baseUrl, {
     document.getElementById("mobile-header-avatar-container-sm").innerHTML = res.data.viewer.login;
 
     // pg-number
-    document.getElementById("pg-number").innerHTML = res.data.viewer.repositories.totalCount;
+    document.getElementById("pg-number").innerHTML = 20;
     document.getElementById("Counter-pg-number").innerHTML = res.data.viewer.repositories.totalCount;
 
 
