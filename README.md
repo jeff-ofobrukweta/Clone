@@ -32,7 +32,7 @@ npm install
 
 #### Add the folowing credentials to the .env file which should be located in the root folder 
 API_KEY_GITHUB = ****github public access key"
-USER_NAME = "github username"
+USER_NAME = "github username", 
 BASE = https://api.github.com/graphql
 
 ```
