@@ -1,4 +1,5 @@
 @import "./layout/layout.scss";
+@import "./fonts.scss";
 // @import "../../_variables";
 
 // @import "../_mixins";
@@ -11,7 +12,7 @@ $body-color: #24292e;
 
 body {
   color: $body-color;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,San Francisco,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
   margin: 0px;
 }
 ul{

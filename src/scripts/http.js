@@ -24,6 +24,7 @@ let query_issue = {
       login
       url
       id
+      name
       avatarUrl
       email
       bio
@@ -116,11 +117,16 @@ fetch(baseUrl, {
     document.getElementById("mobile-text-status").innerHTML = res.data.viewer.status.message;
     document.getElementById("desktop-text-status").innerHTML = res.data.viewer.status.message;
 
-    document.getElementById("name-profile").innerHTML = res.data.viewer.login;
+    document.getElementById("name-profile").innerHTML = res.data.viewer.name;
+    document.getElementById("additionalName").innerHTML = res.data.viewer.login;
+
+    document.getElementById("mobile-name-profile").innerHTML = res.data.viewer.name;
+    document.getElementById("mobile-additionalName").innerHTML = res.data.viewer.login;
+
+
     document.getElementById("card-info").innerHTML = res.data.viewer.bio;
     document.getElementById("mobile-card-info").innerHTML = res.data.viewer.bio;
 
-    document.getElementById("additionalName").innerHTML = res.data.viewer.login;
     document.getElementById("desk-header-avatar-container-sm").src = res.data.viewer.avatarUrl;
     document.getElementById("avatar-container").src = res.data.viewer.avatarUrl;
 
