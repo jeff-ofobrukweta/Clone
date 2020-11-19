@@ -108,13 +108,17 @@ fetch(baseUrl, {
   .then((res) => {
     document.getElementById("boom").innerHTML = listRepository(res.data.viewer.repositories.nodes);
     document.getElementById("user-status-emoji-container").innerHTML = res.data.user.status.emojiHTML;
+    document.getElementById("user-status-emoji-container-mobile").innerHTML = res.data.user.status.emojiHTML;
 
     document.getElementById("name-profile").innerHTML = res.data.viewer.login;
     document.getElementById("card-info").innerHTML = res.data.viewer.bio;
+    document.getElementById("mobile-card-info").innerHTML = res.data.viewer.bio;
 
     document.getElementById("additionalName").innerHTML = res.data.viewer.login;
     document.getElementById("desk-header-avatar-container-sm").src = res.data.viewer.avatarUrl;
     document.getElementById("avatar-container").src = res.data.viewer.avatarUrl;
+
+    document.getElementById("avatar-profile-user").src = res.data.viewer.avatarUrl;
 
     document.getElementById("mobile-avatar-user-sm").src = res.data.viewer.avatarUrl;
     document.getElementById("mobile-header-avatar-container-sm").innerHTML = res.data.viewer.login;

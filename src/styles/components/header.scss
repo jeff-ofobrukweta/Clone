@@ -1,6 +1,6 @@
 .flex-shrink-0{
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
   flex-basis: 25%;
 }
 
@@ -25,6 +25,7 @@
 
 .UnderlineNav-body {
   display: flex;
+  width: inherit;
 }
 
 .UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current=false]), .UnderlineNav-item[role=tab][aria-selected=true] {
@@ -107,6 +108,25 @@
 @media (max-width:860px) {
   .mobile-nav-subheader{
     display: none;
+  }
+
+  .user-profile-bio {
+    overflow: hidden;
+    font-size: 16px;  
+  }
+
+  .UnderlineNav-item {
+    padding: 8px;
+    flex-basis: 100%;
+    font-size: 14px;
+    line-height: 30px;
+    color: #959da5;
+    text-align: center;
+    white-space: nowrap;
+    background-color: initial;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color .36s ease-in;
   }
 
 
