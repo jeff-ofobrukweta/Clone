@@ -23,14 +23,13 @@ See an example of what the final result should look like - https://res.cloudinar
 - Host your site somewhere (e.g. Netlify or Github Pages)
 
 ### Installation
-
+```
 npm install
 
 ```
-```
 ### Enviroment Variables
 
-#### Add the folowing credentials to the .env file which should be located in the root folder 
+#### Add the folowing credentials to the .env file which should be located in the root directory 
 API_KEY_GITHUB = ****github public access key"
 USER_NAME = "github username", 
 BASE = https://api.github.com/graphql
