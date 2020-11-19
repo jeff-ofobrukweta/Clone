@@ -27,6 +27,9 @@ let query_issue = {
       avatarUrl
       email
       bio
+      status{
+        message
+      }
       starredRepositories{
         totalCount
       }
@@ -109,6 +112,9 @@ fetch(baseUrl, {
     document.getElementById("boom").innerHTML = listRepository(res.data.viewer.repositories.nodes);
     document.getElementById("user-status-emoji-container").innerHTML = res.data.user.status.emojiHTML;
     document.getElementById("user-status-emoji-container-mobile").innerHTML = res.data.user.status.emojiHTML;
+    // status
+    document.getElementById("mobile-text-status").innerHTML = res.data.viewer.status.message;
+    document.getElementById("desktop-text-status").innerHTML = res.data.viewer.status.message;
 
     document.getElementById("name-profile").innerHTML = res.data.viewer.login;
     document.getElementById("card-info").innerHTML = res.data.viewer.bio;
