@@ -31,8 +31,8 @@ npm install
 ### Enviroment Variables
 
 #### Add the folowing credentials to the .env file which should be located in the root folder 
-API_KEY_GITHUB = 115bf4b1ca847c53a9eb5a4da272004be4be89a2
-USER_NAME = jeff-ofobrukweta
+API_KEY_GITHUB = ****github public access key"
+USER_NAME = "github username"
 BASE = https://api.github.com/graphql
 
 ```
