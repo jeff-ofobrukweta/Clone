@@ -257,7 +257,7 @@ padding: 8px!important;
 }
 
 
-@include tablet {
+@media (max-width:860px) {
   .left-body {
       flex-basis: 25%;
       justify-content: center;
@@ -350,7 +350,7 @@ padding: 8px!important;
 }
 
 
-@include tablet {
+@media (min-width: 768px){
   .col-md-3 {
     width: 100%;
 }
