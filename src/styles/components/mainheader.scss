@@ -1,6 +1,6 @@
 .Header-link {
   font-weight: 600;
-  color: #ffffff;
+  color: white;
   white-space: nowrap;
 }
 
@@ -54,8 +54,8 @@
   padding: 22px 16px;
   font-size: 14px;
   line-height: 1.5;
-  color: #ffffffb3;
-  background-color: #24292e;
+  color: grey;
+  background-color: black;
   max-height: 27px;
 }
 
@@ -101,12 +101,13 @@ img {
   width: 100%;
   font-size: inherit;
   font-weight: 400;
-  color: #fff;
+  color: white;
   vertical-align: middle;
-  background-color: #24292e;
-  border: 1px solid #444d56;
+  background-color: black;
+  border: 1px solid grey-border-color;
   box-shadow: none;
 }
+
 .d-flex {
   display: flex;
 }
@@ -227,7 +228,7 @@ summary {
   border-left: 4px solid transparent;
 }
 
-@media (min-width: 768px){
+@include mobile {
   .flex-md-row {
     flex-direction: row!important;
   }
@@ -275,7 +276,7 @@ summary {
 .nav {
   height: 50px;
   max-width: 100%;
-  background-color: #24292e;
+  background-color: black;
   position: relative;
 }
 
@@ -290,7 +291,7 @@ summary {
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color: white;
   padding: 10px 10px 10px 10px;
 }
 
@@ -333,9 +334,7 @@ summary {
   display: none;
 }
 
-
-
-@media (max-width:860px) {
+@include tablet {
   .Header{
     display: none;
   }

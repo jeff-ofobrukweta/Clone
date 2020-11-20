@@ -136,7 +136,7 @@ a {
 }
 
 .user-status-circle-badge {
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #e1e4e8;
   border-radius: 2em;
   box-shadow: #e1e4e8;
@@ -257,7 +257,7 @@ padding: 8px!important;
 }
 
 
-@media (max-width:860px) {
+@include tablet {
   .left-body {
       flex-basis: 25%;
       justify-content: center;
@@ -334,9 +334,7 @@ padding: 8px!important;
   text-align: center;
 }
 
-  // 
-
-    .vcard-names {
+.vcard-names {
       line-height: 1;
       position: relative;
       top: 0rem;
@@ -352,7 +350,7 @@ padding: 8px!important;
 }
 
 
-@media (min-width: 768px){
+@include tablet {
   .col-md-3 {
     width: 100%;
 }
