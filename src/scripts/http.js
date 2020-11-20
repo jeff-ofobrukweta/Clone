@@ -201,7 +201,7 @@ const listRepository = (list = []) =>
         <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
           <div class="pinned-item-list-item-content">
             <div class="d-flex width-full flex-items-center position-relative">
-              <a href="/jeff-ofobrukweta/${item.name}" class="text-bold flex-auto min-width-0">
+              <a href="/${item.name}" class="text-bold flex-auto min-width-0">
                 <span class="repo" title=${String(item.name)} id=${String(item.name)}>${item.name}</span>
               </a>
             </div>
@@ -216,7 +216,7 @@ const listRepository = (list = []) =>
                 <span itemprop="programmingLanguage">${item.primaryLanguage ? item.primaryLanguage.name : "JavaScript"}</span>
               </span>
 
-              <a href="/jeff-ofobrukweta/uba-reward/stargazers" class="pinned-item-meta muted-link ">
+              <a href="/" class="pinned-item-meta muted-link ">
                 <svg aria-label="star" class="octicon octicon-star" viewBox="0 0 16 16" version="1.1" width="16"
                   height="16" role="img">
                   <path fill-rule="evenodd"
